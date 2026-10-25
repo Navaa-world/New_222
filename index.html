@@ -550,7 +550,7 @@ async function renderPositions(count){
     <div class="earn-note" style="margin-top:8px">Live per-second value is an estimate; on-chain preview is authoritative.</div>
     <div class="earn-actions" style="margin-top:10px">
   <button class="btn secondary" data-claim="${i}" type="button">Claim staking reward</button>
-     <button class="btn secondary" data-principal="${i}" ${(!principalDone&&Date.now()/1000>=unlockNum)?'':'disabled'}>Withdraw principal</button>
+     <button class="btn secondary" data-principal="${i}" type="button">Withdraw principal</button>
     </div>`;
    host.appendChild(card);nodes.push({card,rewardId,i});
   }catch(e){console.warn('Could not load staking position',i,e);}
